@@ -28,7 +28,8 @@ public class TestCustomer {
 		// 第四步：使用Connection对象创建一个Session对象。
 		Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 		// 第五步：使用Session对象创建一个Destination对象。和发送端保持一致queue，并且队列的名称一致。
-		Queue queue = session.createQueue("test-queue");
+		// Queue queue = session.createQueue("test-queue");
+		Queue queue = session.createQueue("spring-queue");
 		// 第六步：使用Session对象创建一个Consumer对象。
 		MessageConsumer consumer = session.createConsumer(queue);
 		// 第七步：接收消息。
